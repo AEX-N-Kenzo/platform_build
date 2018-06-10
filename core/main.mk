@@ -319,9 +319,10 @@ include build/core/pdk_config.mk
 # -----------------------------------------------------------------
 # Enable dynamic linker developer warnings for all builds except
 # final release.
-ifneq ($(PLATFORM_VERSION_CODENAME),REL)
-  ADDITIONAL_BUILD_PROPERTIES += ro.bionic.ld.warning=1
-endif
+# ifneq ($(PLATFORM_VERSION_CODENAME),REL)
+#   ADDITIONAL_BUILD_PROPERTIES += ro.bionic.ld.warning=1
+# endif
+ADDITIONAL_BUILD_PROPERTIES += ro.bionic.ld.warning=0
 
 # -----------------------------------------------------------------
 ###
